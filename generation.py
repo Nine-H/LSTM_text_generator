@@ -7,20 +7,21 @@ from keras.models import Sequential
 from keras.layers import LSTM, Dense, Dropout, Masking, Embedding
 from keras.utils import np_utils
 
-#
 # Load the Data
-#
+text=open("input.txt",'r')
 
-text =(open("input.txt").read())
-
-model = Sequential()
+# Init model
+model=Sequential()
+num_words=50
+training_length=120
+#embedding_matrix=#???
 
 # Embedding layer
 model.add(
     Embedding(input_dim=num_words,
               input_length = training_length,
               output_dim=100,
-              weights=[embedding_matrix],
+              #weights=[embedding_matrix],
               trainable=False,
               mask_zero=True))
 
@@ -42,4 +43,7 @@ model.add(Dense(num_words, activation='softmax'))
 
 # Compile the model
 model.compile(
-    optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+    optimizer='adam',
+    loss='categorical_crossentropy',
+    metrics=['accuracy'])
+

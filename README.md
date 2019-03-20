@@ -13,7 +13,8 @@ I wrote a scraper for comments from pornhub, I want to feed them into a machine-
 
 ## Notes
 
-
+* json_dump.py is just a script to extract comments from the porny app json output
+* regresssion.py generates and runs the model
 
 ## Reading List
 
@@ -23,3 +24,4 @@ I wrote a scraper for comments from pornhub, I want to feed them into a machine-
 <https://www.analyticsvidhya.com/blog/2018/03/text-generation-using-python-nlp/>
 <https://minimaxir.com/2018/05/text-neural-networks/>
 <https://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/>
+<https://adventuresinmachinelearning.com/word2vec-keras-tutorial>
